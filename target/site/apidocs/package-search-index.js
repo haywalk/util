@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ca.haywalk.util.string"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ca.haywalk.util.collection"},{"l":"ca.haywalk.util.string"}]

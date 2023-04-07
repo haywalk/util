@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"ca.haywalk.util.string","l":"StringConcatenator"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"ca.haywalk.util.collection","l":"ArrayList"},{"p":"ca.haywalk.util.collection","l":"Collection"},{"p":"ca.haywalk.util.collection","l":"List"},{"p":"ca.haywalk.util.string","l":"StringConcatenator"}]

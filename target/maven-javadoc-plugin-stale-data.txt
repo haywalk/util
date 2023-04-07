@@ -25,24 +25,26 @@
 -windowtitle
 'util 1.0-SNAPSHOT API'
 ca.haywalk.util.string
+ca.haywalk.util.collection
 /home/haywalk/programming/mvntest/util/src/main/java = 1680833017519
-/home/haywalk/programming/mvntest/util/target/site/apidocs/constant-values.html = 1680835249551
-/home/haywalk/programming/mvntest/util/target/site/apidocs/member-search-index.zip = 1680835249631
-/home/haywalk/programming/mvntest/util/target/site/apidocs/stylesheet.css = 1680835249691
-/home/haywalk/programming/mvntest/util/target/site/apidocs/allclasses.html = 1680835249671
-/home/haywalk/programming/mvntest/util/target/site/apidocs/package-search-index.zip = 1680835249627
-/home/haywalk/programming/mvntest/util/target/site/apidocs/allpackages-index.html = 1680835249659
-/home/haywalk/programming/mvntest/util/target/site/apidocs/element-list = 1680835249523
-/home/haywalk/programming/mvntest/util/target/site/apidocs/jquery-ui.overrides.css = 1680835249715
-/home/haywalk/programming/mvntest/util/target/site/apidocs/member-search-index.js = 1680835249631
-/home/haywalk/programming/mvntest/util/target/site/apidocs/index.html = 1680835249675
-/home/haywalk/programming/mvntest/util/target/site/apidocs/package-search-index.js = 1680835249607
-/home/haywalk/programming/mvntest/util/target/site/apidocs/index-all.html = 1680835249635
-/home/haywalk/programming/mvntest/util/target/site/apidocs/type-search-index.zip = 1680835249631
-/home/haywalk/programming/mvntest/util/target/site/apidocs/type-search-index.js = 1680835249627
-/home/haywalk/programming/mvntest/util/target/site/apidocs/deprecated-list.html = 1680835249667
-/home/haywalk/programming/mvntest/util/target/site/apidocs/allclasses-index.html = 1680835249651
-/home/haywalk/programming/mvntest/util/target/site/apidocs/search.js = 1680835249695
-/home/haywalk/programming/mvntest/util/target/site/apidocs/help-doc.html = 1680835249687
-/home/haywalk/programming/mvntest/util/target/site/apidocs/overview-tree.html = 1680835249583
-/home/haywalk/programming/mvntest/util/target/site/apidocs/script.js = 1680835249691
+/home/haywalk/programming/mvntest/util/target/site/apidocs/constant-values.html = 1680885578590
+/home/haywalk/programming/mvntest/util/target/site/apidocs/member-search-index.zip = 1680885578778
+/home/haywalk/programming/mvntest/util/target/site/apidocs/stylesheet.css = 1680885578842
+/home/haywalk/programming/mvntest/util/target/site/apidocs/allclasses.html = 1680885578818
+/home/haywalk/programming/mvntest/util/target/site/apidocs/package-search-index.zip = 1680885578774
+/home/haywalk/programming/mvntest/util/target/site/apidocs/overview-summary.html = 1680885578834
+/home/haywalk/programming/mvntest/util/target/site/apidocs/allpackages-index.html = 1680885578802
+/home/haywalk/programming/mvntest/util/target/site/apidocs/element-list = 1680885578490
+/home/haywalk/programming/mvntest/util/target/site/apidocs/jquery-ui.overrides.css = 1680885578870
+/home/haywalk/programming/mvntest/util/target/site/apidocs/member-search-index.js = 1680885578778
+/home/haywalk/programming/mvntest/util/target/site/apidocs/index.html = 1680885578830
+/home/haywalk/programming/mvntest/util/target/site/apidocs/package-search-index.js = 1680885578758
+/home/haywalk/programming/mvntest/util/target/site/apidocs/index-all.html = 1680885578778
+/home/haywalk/programming/mvntest/util/target/site/apidocs/type-search-index.zip = 1680885578778
+/home/haywalk/programming/mvntest/util/target/site/apidocs/type-search-index.js = 1680885578774
+/home/haywalk/programming/mvntest/util/target/site/apidocs/deprecated-list.html = 1680885578810
+/home/haywalk/programming/mvntest/util/target/site/apidocs/allclasses-index.html = 1680885578798
+/home/haywalk/programming/mvntest/util/target/site/apidocs/search.js = 1680885578846
+/home/haywalk/programming/mvntest/util/target/site/apidocs/help-doc.html = 1680885578838
+/home/haywalk/programming/mvntest/util/target/site/apidocs/overview-tree.html = 1680885578702
+/home/haywalk/programming/mvntest/util/target/site/apidocs/script.js = 1680885578846
