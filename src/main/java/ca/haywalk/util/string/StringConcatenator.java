@@ -115,7 +115,7 @@ public class StringConcatenator {
     public String flush() {
         String contents = build();
         size = 0;
-        return contents;
+        return null;
     }
 
     /**
