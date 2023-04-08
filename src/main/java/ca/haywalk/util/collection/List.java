@@ -1,7 +1,7 @@
 package ca.haywalk.util.collection;
 
 /**
- * A generic abstract list.
+ * A generic list.
  * 
  * @author Hayden Walker
  * @version 2023-04-07

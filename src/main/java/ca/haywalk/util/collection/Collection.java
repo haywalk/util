@@ -3,7 +3,7 @@ package ca.haywalk.util.collection;
 import java.util.Iterator;
 
 /**
- * A generic abstract collection.
+ * A generic collection.
  * 
  * @author Hayden Walker
  * @version 2023-04-07
