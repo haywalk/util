@@ -127,7 +127,7 @@ public class ArrayList<T> implements List<T> {
      */
     @Override
     public Iterator<T> iterator() {
-        return new ArrayListIterator<T>();
+        return new ArrayListIterator();
     }
 
     @Override
@@ -183,7 +183,7 @@ public class ArrayList<T> implements List<T> {
     /**
      * An iterator over the list.
      */
-    private class ArrayListIterator<E> implements Iterator<E> {
+    private class ArrayListIterator implements Iterator<T> {
         // Keep track of the current index
         private int index;
 
@@ -209,16 +209,14 @@ public class ArrayList<T> implements List<T> {
          * 
          * @return The next item in the list.
          */
-        @SuppressWarnings("unchecked")
         @Override
-        public E next() throws NoSuchElementException {
+        public T next() throws NoSuchElementException {
             // Throw exception if there is no next element.
             if(!hasNext()) {
                 throw new NoSuchElementException("No such element: End of list.");
             }
 
-            // Return the next element
-            return (E) array[index++];
+            return get(index++);
         }
     }
 }
