@@ -126,7 +126,7 @@ public class ArrayStack<T> implements Stack<T> {
      */
     @Override
     public Iterator<T> iterator() {
-        return new ArrayStackIterator<T>();
+        return new ArrayStackIterator();
     }
 
     /**
@@ -225,7 +225,7 @@ public class ArrayStack<T> implements Stack<T> {
     /**
      * An Iterator over this ArrayStack.
      */
-    private class ArrayStackIterator<E> implements Iterator<E> {
+    private class ArrayStackIterator implements Iterator<T> {
 
         /**
          * The current index in the stack array.
@@ -257,14 +257,14 @@ public class ArrayStack<T> implements Stack<T> {
          */
         @SuppressWarnings("unchecked")
         @Override
-        public E next() throws NoSuchElementException {
+        public T next() throws NoSuchElementException {
             // Throw exception if out of elements
             if(!hasNext()) {
                 throw new NoSuchElementException("No more elements.");
             }
 
             // Return next element and advance index
-            return (E) array[index++];
+            return (T) array[index++];
         }
 
     }
