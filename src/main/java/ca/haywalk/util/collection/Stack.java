@@ -1,5 +1,11 @@
 package ca.haywalk.util.collection;
 
+/**
+ * A generic stack.
+ * 
+ * @author Hayden Walker
+ * @version 2023-04-07
+ */
 public interface Stack<T> extends Collection<T> {
     /**
      * Push to the stack.
