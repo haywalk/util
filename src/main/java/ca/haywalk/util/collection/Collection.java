@@ -44,4 +44,9 @@ public interface Collection<T> extends Iterable<T> {
      * Clear the collection.
      */
     public abstract void clear();
+
+    /**
+     * Check if the collection is empty.
+     */
+    public abstract boolean isEmpty();
 }

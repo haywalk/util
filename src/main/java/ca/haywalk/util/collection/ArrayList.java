@@ -92,11 +92,28 @@ public class ArrayList<T> implements List<T> {
      */
     @Override
     public boolean addAll(Collection<? extends T> items) {
-        // Attempt to add each item
+        // Throw exception if collection is null
+        if(items == null) {
+            throw new NullPointerException("Cannot add null collection.");
+        }
+
+        // Create a buffer collection
+        Collection<T> toAdd = new ArrayList<T>();
+
+        // Add each item to the buffer
         for(T item : items) {
-            if(!add(item)) {
-                return false;
+            // Check for nullity
+            if(item == null) {
+                throw new NullPointerException("Collection has null element.");
             }
+
+            // Add to buffer
+            toAdd.add(item);
+        }
+
+        // Add all items from buffer to this list
+        for(T item : toAdd) {
+            this.add(item);
         }
 
         // Return true
@@ -135,6 +152,16 @@ public class ArrayList<T> implements List<T> {
 
         // Return the item at the index.
         return (T) array[index];
+    }
+
+    /**
+     * Check if the list is empty.
+     * 
+     * @return {@code true} if the list is empty.
+     */
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
     }
     
     /**
