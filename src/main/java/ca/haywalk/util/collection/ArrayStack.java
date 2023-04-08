@@ -151,7 +151,6 @@ public class ArrayStack<T> implements Stack<T> {
      * Push to the stack.
      * 
      * @param item Item to add.
-     * @return {@code true} if successful.
      * @throws NullPointerException if item is null.
      * @throws StackOverflowException if stack is full.
      */
