@@ -176,6 +176,79 @@ public class LinkedQueue<T> implements Queue<T> {
         size--;
         return removed;
     }
+
+    /**
+     * Remove a specific item from the queue.
+     * 
+     * @param item Item to remove.
+     * @return {@code true} if item is successfully removed.
+     * @throws NullPointerException If item is {@code null}.
+     */
+    @Override
+    public boolean remove(T item) throws NullPointerException {
+        // Throw exception if item is null
+        if(item == null) {
+            throw new NullPointerException("Cannot remove null.");
+        }
+
+        // Check if empty
+        if(isEmpty()) {
+            return false;
+        }
+
+        // Check if head contains the item to remove
+        if(head.getData().equals(item)) {
+            head = head.getNext();
+            size--;
+            return true;
+        }
+
+        // Otherwise traverse the list until the item is found
+        Node<T> current = head;
+
+        while(current.getNext() != null) {
+            // If the next node has the data, link this node to the next-next node
+            if(current.getNext().getData().equals(item)) {
+                current.setNext(current.getNext().getNext());
+                size--;
+                return true;
+            }
+        }
+
+        // Return false if not found
+        return false;
+    }
+
+    /**
+     * Check whether the queue contains a certain item.
+     * 
+     * @param item Item to check for.
+     * @return {@code true} if item is in the queue.
+     * @throws NullPointerException If item is {@code null}.
+     */
+    @Override
+    public boolean contains(T item) throws NullPointerException {
+        // Throw exception if item is null
+        if(item == null) {
+            throw new NullPointerException("Cannot check for null.");
+        }
+
+        // Traverse the linked list
+        Node<T> current = head;
+        
+        while(current != null) {
+            // Return true if found
+            if(current.getData().equals(item)) {
+                return true;
+            }
+
+            // Move onto next node
+            current = current.getNext();
+        }
+
+        // Return false if not found.
+        return false;
+    }
     
     /**
      * A linked list node.

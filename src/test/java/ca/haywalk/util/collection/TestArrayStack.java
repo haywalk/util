@@ -48,4 +48,31 @@ public class TestArrayStack {
             assertEquals(i, stack.pop());
         }
     }
+
+    /**
+     * Test the contains() method
+     */
+    @Test
+    public void testContains() {
+        assertFalse(stack.contains(1));
+        stack.add(1);
+        assertTrue(stack.contains(1));
+    }
+
+    /**
+     * Test the remove(object) method
+     */
+    @Test
+    public void testRemove() {
+        // Add an item
+        stack.add(1);
+        assertEquals(1, stack.size());
+        assertTrue(stack.contains(1));
+
+        // Remove the item
+        Integer number = 1;
+        assertEquals(true, stack.remove(number));
+        assertEquals(0, stack.size());
+        assertFalse(stack.contains(1));
+    }
 }

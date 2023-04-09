@@ -100,4 +100,47 @@ public class TestArrayList {
         list.clear();
         assertEquals(0, list.size());
     }
+
+    /**
+     * Test the contains() method
+     */
+    @Test
+    public void testContains() {
+        assertFalse(list.contains(1));
+        list.add(1);
+        assertTrue(list.contains(1));
+    }
+
+    /**
+     * Test the remove(object) method
+     */
+    @Test
+    public void testRemoveObject() {
+        // Add an item
+        list.add(1);
+        assertEquals(1, list.size());
+        assertTrue(list.contains(1));
+
+        // Remove the item
+        Integer number = 1;
+        assertEquals(true, list.remove(number));
+        assertEquals(0, list.size());
+        assertFalse(list.contains(1));
+    }
+
+    /**
+     * Test the remove(index) method
+     */
+    @Test
+    public void testRemoveIndex() {
+        // Add an item
+        list.add(1);
+        assertEquals(1, list.size());
+        assertTrue(list.contains(1));
+
+        // Remove the item
+        assertEquals(1, list.remove(0));
+        assertEquals(0, list.size());
+        assertFalse(list.contains(1));
+    }
 }

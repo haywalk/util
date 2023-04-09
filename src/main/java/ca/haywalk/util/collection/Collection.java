@@ -49,4 +49,22 @@ public interface Collection<T> extends Iterable<T> {
      * Check if the collection is empty.
      */
     public abstract boolean isEmpty();
+
+    /**
+     * Remove an item from the collection. Removes first occurrence.
+     * 
+     * @param item Item to remove.
+     * @return {@code true} if item was successfully removed.
+     * @throws NullPointerException if item is {@code null}.
+     */
+    public boolean remove(T item) throws NullPointerException;
+
+    /**
+     * Check if the collection contains an item.
+     * 
+     * @param item Item to check for.
+     * @return {@code true} if collection contains the item.
+     * @throws NullPointerException if item is {@code null}.
+     */
+    public boolean contains(T item) throws NullPointerException;
 }

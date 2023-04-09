@@ -219,4 +219,107 @@ public class ArrayList<T> implements List<T> {
             return get(index++);
         }
     }
+
+    /**
+     * Check if an item is in the list.
+     * 
+     * @param item Item to check for.
+     * @return {@code true} if collection contains the item.
+     * @throws NullPointerException if item is {@code null}.
+     */
+    @Override
+    public boolean contains(T item) {
+        // Throw exception if item is null.
+        if(item == null) {
+            throw new NullPointerException("Cannot check for null.");
+        }
+
+        // Check each index, return true if item is found.
+        for(int i = 0; i < size; i++) {
+            if(array[i].equals(item)) {
+                return true;
+            }
+        }
+
+        // Otherwise return false.
+        return false;
+    }
+
+    /**
+     * Check if an item is in the list.
+     * 
+     * @param item Item to check for.
+     * @return {@code true} if collection contains the item.
+     * @throws NullPointerException if item is {@code null}.
+     */
+    @Override
+    public int index(T item) {
+        // Throw exception if item is null.
+        if(item == null) {
+            throw new NullPointerException("Cannot find index of null.");
+        }
+
+        // Check each index, return the index if item is found.
+        for(int i = 0; i < size; i++) {
+            if(array[i].equals(item)) {
+                return i;
+            }
+        }
+
+        // Otherwise return -1.
+        return -1;
+    }
+
+    /**
+     * Remove the item at a certain index.
+     * 
+     * @param index Index of item to remove.
+     * @return Item removed.
+     * @throws IndexOutOfBoundsException If index is out of bounds.
+     */
+    @Override
+    public T remove(int index) throws IndexOutOfBoundsException {
+        // Throw exception for invalid index
+        if(index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException(String.format("Index %d out of bounds for size %d.", index, size));
+        }
+
+        // Get the item at the index
+        T removed = get(index);
+
+        // Shift remaining elements back
+        for(int i = index; i < size - 1; i++) {
+            array[i] = array[i + 1];
+        }
+
+        // Decrement size and return removed item.
+        size--;
+        return removed;      
+    }
+
+    /**
+     * Remove an item from the list. Removes first occurrence.
+     * 
+     * @param item Item to remove.
+     * @return {@code true} if item was successfully removed.
+     * @throws NullPointerException if item is {@code null}.
+     */
+    public boolean remove(T item) throws NullPointerException {
+        // Throw exception if passed null.
+        if(item == null) {
+            throw new NullPointerException("Cannot remove null.");
+        }
+
+        // Look up the index of the item.
+        int index = index(item);
+
+        // Return false if not found.
+        if(index == -1) {
+            return false;
+        }
+
+        // Otherwise remove the item at the index and return true
+        remove(index);
+        return true;
+    }
 }

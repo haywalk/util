@@ -268,4 +268,73 @@ public class ArrayStack<T> implements Stack<T> {
         }
 
     }
+    /**
+     * Remove an item from the stack.
+     * 
+     * @param item Item to remove.
+     * @return {@code true} if the item was successfully removed.
+     * @throws NullPointerException If item is {@code null}.
+     */
+    @Override
+    public boolean remove(T item) throws NullPointerException {
+        // Throw exception if passed null
+        if(item == null) {
+            throw new NullPointerException("Cannot remove null.");
+        }
+
+        // Get the index of the item
+        int index = index(item);
+
+        // Return false if item not found
+        if(index == -1) {
+            return false;
+        }
+
+        // Remove by shift subsequent items back 1 index
+        for(int i = index; i < size - 1; i++) {
+            array[i] = array[i + 1];
+        }
+
+        // Decrement size
+        size--;
+
+        // Return true
+        return true;
+    }
+
+    /**
+     * Check if an item is in the stack.
+     * 
+     * @param item Item to check for.
+     * @return {@code true} if the item is in the stack.
+     * @throws NullPointerException If item is {@code null}.
+     */
+    @Override
+    public boolean contains(T item) throws NullPointerException {
+        // Throw exception if passed null
+        if(item == null) {
+            throw new NullPointerException("Cannot check for null.");
+        }
+
+        // Use index() to check if the item is present.
+        return index(item) != -1;
+    }
+
+    /**
+     * Look up the index of a given item in the array.
+     * 
+     * @param item Item to look up.
+     * @return The item's index, or -1 if not found.
+     */
+    private int index(T item) {
+        // Return index if found
+        for(int i = 0; i < size; i++) {
+            if(array[i].equals(item)) {
+                return i;
+            }
+        }
+
+        // Otherwise return -1
+        return -1;
+    }
 }

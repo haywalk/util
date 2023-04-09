@@ -59,4 +59,31 @@ public class TestLinkedQueue {
             assertEquals(i, queue.dequeue());
         }
     }
+
+    /**
+     * Test the contains() method
+     */
+    @Test
+    public void testContains() {
+        assertFalse(queue.contains(1));
+        queue.add(1);
+        assertTrue(queue.contains(1));
+    }
+
+    /**
+     * Test the remove(object) method
+     */
+    @Test
+    public void testRemove() {
+        // Add an item
+        queue.add(1);
+        assertEquals(1, queue.size());
+        assertTrue(queue.contains(1));
+
+        // Remove the item
+        Integer number = 1;
+        assertEquals(true, queue.remove(number));
+        assertEquals(0, queue.size());
+        assertFalse(queue.contains(1));
+    }
 }
