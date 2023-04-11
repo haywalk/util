@@ -7,9 +7,11 @@ This is a utility library for Java programs, that I'm writing for practice and f
 So far, the library includes:
 
 - Collections (`ca.haywalk.util.collection`)
+  - Generic collection (interface)
   - List (interface and `ArrayList`)
   - Stack (interface and `ArrayStack`)
   - Queue (interface and `LinkedQueue`)
+  - Dictionary (interface and `ArrayMap`)
 - String utilities (`ca.haywalk.util.string`)
   - `StringConcatenator` (like `java.lang.StringBuilder`)
   
